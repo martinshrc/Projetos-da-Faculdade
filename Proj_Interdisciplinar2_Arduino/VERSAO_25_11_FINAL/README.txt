@@ -1,0 +1,2 @@
+Código relacionado ao projeto interdisciplinar nivel 2, que consiste em coletar a leitura do sensor de calor conectado ao Arduino, processar esses dados recebidos e executar o comando de ligar a bomba d'agua para refrescar o ambiente, ou apenas mante-la desligada caso não tenha atingido a temperatura desejada. 
+ Nesse caso especificamente, a agua está sendo direcionada por uma mangueira até um boné utilizado pelo usuario. 
