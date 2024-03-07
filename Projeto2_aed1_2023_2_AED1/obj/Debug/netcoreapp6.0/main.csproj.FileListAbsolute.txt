@@ -1,0 +1,59 @@
+/home/runner/CSharp/bin/Debug/netcoreapp6.0/main
+/home/runner/CSharp/bin/Debug/netcoreapp6.0/main.deps.json
+/home/runner/CSharp/bin/Debug/netcoreapp6.0/main.runtimeconfig.json
+/home/runner/CSharp/bin/Debug/netcoreapp6.0/main.dll
+/home/runner/CSharp/bin/Debug/netcoreapp6.0/ref/main.dll
+/home/runner/CSharp/bin/Debug/netcoreapp6.0/main.pdb
+/home/runner/CSharp/obj/Debug/netcoreapp6.0/main.csproj.AssemblyReference.cache
+/home/runner/CSharp/obj/Debug/netcoreapp6.0/main.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/CSharp/obj/Debug/netcoreapp6.0/main.AssemblyInfoInputs.cache
+/home/runner/CSharp/obj/Debug/netcoreapp6.0/main.AssemblyInfo.cs
+/home/runner/CSharp/obj/Debug/netcoreapp6.0/main.csproj.CoreCompileInputs.cache
+/home/runner/CSharp/obj/Debug/netcoreapp6.0/main.dll
+/home/runner/CSharp/obj/Debug/netcoreapp6.0/ref/main.dll
+/home/runner/CSharp/obj/Debug/netcoreapp6.0/main.pdb
+/home/runner/CSharp/obj/Debug/netcoreapp6.0/main.genruntimeconfig.cache
+/home/runner/2022-2-AED-I-Projeto-1/bin/Debug/netcoreapp6.0/main
+/home/runner/2022-2-AED-I-Projeto-1/bin/Debug/netcoreapp6.0/main.deps.json
+/home/runner/2022-2-AED-I-Projeto-1/bin/Debug/netcoreapp6.0/main.runtimeconfig.json
+/home/runner/2022-2-AED-I-Projeto-1/bin/Debug/netcoreapp6.0/main.dll
+/home/runner/2022-2-AED-I-Projeto-1/bin/Debug/netcoreapp6.0/ref/main.dll
+/home/runner/2022-2-AED-I-Projeto-1/bin/Debug/netcoreapp6.0/main.pdb
+/home/runner/2022-2-AED-I-Projeto-1/obj/Debug/netcoreapp6.0/main.csproj.AssemblyReference.cache
+/home/runner/2022-2-AED-I-Projeto-1/obj/Debug/netcoreapp6.0/main.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/2022-2-AED-I-Projeto-1/obj/Debug/netcoreapp6.0/main.AssemblyInfoInputs.cache
+/home/runner/2022-2-AED-I-Projeto-1/obj/Debug/netcoreapp6.0/main.AssemblyInfo.cs
+/home/runner/2022-2-AED-I-Projeto-1/obj/Debug/netcoreapp6.0/main.csproj.CoreCompileInputs.cache
+/home/runner/2022-2-AED-I-Projeto-1/obj/Debug/netcoreapp6.0/main.dll
+/home/runner/2022-2-AED-I-Projeto-1/obj/Debug/netcoreapp6.0/ref/main.dll
+/home/runner/2022-2-AED-I-Projeto-1/obj/Debug/netcoreapp6.0/main.pdb
+/home/runner/2022-2-AED-I-Projeto-1/obj/Debug/netcoreapp6.0/main.genruntimeconfig.cache
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/obj/Debug/netcoreapp6.0/main.csproj.AssemblyReference.cache
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/obj/Debug/netcoreapp6.0/main.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/obj/Debug/netcoreapp6.0/main.AssemblyInfoInputs.cache
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/obj/Debug/netcoreapp6.0/main.AssemblyInfo.cs
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/obj/Debug/netcoreapp6.0/main.csproj.CoreCompileInputs.cache
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/obj/Debug/netcoreapp6.0/main.dll
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/obj/Debug/netcoreapp6.0/ref/main.dll
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/obj/Debug/netcoreapp6.0/main.pdb
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/bin/Debug/netcoreapp6.0/main
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/bin/Debug/netcoreapp6.0/main.deps.json
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/bin/Debug/netcoreapp6.0/main.runtimeconfig.json
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/bin/Debug/netcoreapp6.0/main.dll
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/bin/Debug/netcoreapp6.0/ref/main.dll
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/bin/Debug/netcoreapp6.0/main.pdb
+/home/runner/2023-2-AED-I-Projeto-2-aed1-2023-2-B-15/obj/Debug/netcoreapp6.0/main.genruntimeconfig.cache
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\bin\Debug\netcoreapp6.0\main.exe
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\bin\Debug\netcoreapp6.0\main.deps.json
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\bin\Debug\netcoreapp6.0\main.runtimeconfig.json
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\bin\Debug\netcoreapp6.0\main.dll
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\bin\Debug\netcoreapp6.0\main.pdb
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\obj\Debug\netcoreapp6.0\main.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\obj\Debug\netcoreapp6.0\main.AssemblyInfoInputs.cache
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\obj\Debug\netcoreapp6.0\main.AssemblyInfo.cs
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\obj\Debug\netcoreapp6.0\main.csproj.CoreCompileInputs.cache
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\obj\Debug\netcoreapp6.0\main.dll
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\obj\Debug\netcoreapp6.0\refint\main.dll
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\obj\Debug\netcoreapp6.0\main.pdb
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\obj\Debug\netcoreapp6.0\main.genruntimeconfig.cache
+C:\Users\heric\Documents\Facul\PROJETO 2_AED1\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\obj\Debug\netcoreapp6.0\ref\main.dll

@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\heric\\Documents\\Facul\\PROJETO 2_AED1\\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\\main.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\heric\\Documents\\Facul\\PROJETO 2_AED1\\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\\main.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\heric\\Documents\\Facul\\PROJETO 2_AED1\\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\\main.csproj",
+        "projectName": "main",
+        "projectPath": "C:\\Users\\heric\\Documents\\Facul\\PROJETO 2_AED1\\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\\main.csproj",
+        "packagesPath": "C:\\Users\\heric\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\heric\\Documents\\Facul\\PROJETO 2_AED1\\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\heric\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "netcoreapp6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "netcoreapp6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

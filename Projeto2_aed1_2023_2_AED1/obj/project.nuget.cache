@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Vd4GMF+eajvtWCaL8uqeXX7a/+ZngqmaLcg6PvzWBMVowYV6nKIsbQOsuca9GHjZj11RXJDRbID9fKubhpSvyg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\heric\\Documents\\Facul\\PROJETO 2_AED1\\PRONTO-2023-2-AED-I-Projeto-2-aed1-2023-2-B-15\\main.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\heric\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\heric\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\heric\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\heric\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512"
+  ],
+  "logs": []
+}
