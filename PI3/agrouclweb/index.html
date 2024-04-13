@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro UCL</title>
+
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-lite.js"></script>
+    <!-- Importe o Firestore Lite -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="container mx-auto w-scree h-screen space-y-10">
+
+        <!-- Titulo -->
+        <div class="flex flex-col items-center pt-5">
+            <h1 class="text-4xl font-bold">Agro UCL</h1>
+            <p class="text-lg">Monitoramento de solo</p>
+        </div>
+
+        <!-- Uma dashboard com cards dos valores dos sensores -->
+        <div id="cards" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 place-content-center">
+
+        </div>
+
+    </div>
+
+
+    <script type="module">
+
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js';
+        import { getDatabase, ref, get, query, onValue } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDYCi-dZe9TE41R5B8Wid8pg6PVtWuoHE8",
+            authDomain: "agroucl.firebaseapp.com",
+            databaseURL: "https://agroucl-default-rtdb.firebaseio.com",
+            projectId: "agroucl",
+            storageBucket: "agroucl.appspot.com",
+            messagingSenderId: "915400744363",
+            appId: "1:915400744363:web:500ced47406b81be5f46ee",
+            measurementId: "G-MH11N45216"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        const dbRef = ref(db, 'solo');
+
+        onValue(dbRef, (snapshot) => {
+            const data = snapshot.val();
+            console.log(data);
+            const mapedData = mapValues(data);
+            updateCards(mapedData);
+        });
+
+        const capitalize = (str) => {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        const CardComponent = (title, value) => {
+            return `
+                <div class="bg-gray-200 p-4 rounded-lg text-center">
+                    <h2 class="text-xl font-bold">${title}</h2>
+                    <p id="phValue" class="text-3xl">${value}</p>
+                </div>
+            `;
+        }
+
+        const mapValues = (data) => {
+            return {
+                //ph: data.PH,
+                temperatura: data.temperatura, //data é o acesso ao servidor
+                //umidade: data.umidade,
+                //chuva: data.chuva ?? "N/A"
+            }
+        }
+
+        const updateCards = (data) => {
+            const cards = document.getElementById('cards');
+            cards.innerHTML = '';
+            Object.entries(data).map(([key, value]) => {
+                cards.innerHTML += CardComponent(capitalize(key), value);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
