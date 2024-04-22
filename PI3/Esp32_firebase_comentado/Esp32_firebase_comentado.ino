@@ -6,8 +6,8 @@
 #include <Adafruit_MLX90614.h>
 
 //fazendo definições para não repetir muito texto durante o código 
-#define WIFI_SSID "Sunshine-Residencia"                  //substitua "Nome_do_seu_wifi" pelo nome da sua rede wifi 
-#define WIFI_PASSWORD "07herick"             //substitua "Senha_do_seu_wifi" pela senha da sua rede wifi 
+#define WIFI_SSID "herick"                  //substitua "Nome_do_seu_wifi" pelo nome da sua rede wifi 
+#define WIFI_PASSWORD "herick123"             //substitua "Senha_do_seu_wifi" pela senha da sua rede wifi 
 #define FIREBASE_HOST "https://agroucl-default-rtdb.firebaseio.com"    //substitua "Link_do_seu_banco_de_dados" pelo link do seu banco de dados 
 #define FIREBASE_AUTH "FVi51mExNObRynr7bNwS4XUhhDZ5QPJL41iOGlkd"   //substitua "Senha_do_seu_banco_de_dados" pela senha do seu banco de dados
 
