@@ -1,94 +1,402 @@
-<html lang="en">
 
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro UCL</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra de Navegação Lateral</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #5EAF53;
+      border-left: 5px solid black;
+    }
 
-    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-lite.js"></script>
-    <!-- Importe o Firestore Lite -->
+    nav {
+      background-color: #fcd7e3;
+      padding: 10px;
+      overflow: hidden;
+      position: fixed;
+      height: 100%;
+      width: 200px;
+      border-radius: 20px;
+    }
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    nav a {
+      display: block;
+      color: #271a1f;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+      margin-bottom: 15px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      background-color: #ff99c3;
+      color: #580721;
+    }
+
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+      color: #ec84ae;
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .flex-item {
+      flex: 1;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: #333;
+    }
+
+    .thermometer {
+      position: relative;
+      width: 50px;
+      height: 200px;
+      margin: 0 auto;
+      background-color: #8ecdde;
+      border-radius: 25px;
+    }
+
+    .thermometer::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: var(--temperature);
+      background-color: #d62439;
+      border-radius: 25px 25px 0 0;
+    }
+
+    .thermometer-labels {
+      margin-top: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #feebf1;
+      color: #f88fb9;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .popup, .overlay {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
+  <nav>
+    <img src="agrouclc.png" width="200" height="200" alt="Agro UCL Logo">
+    <a href="#" onclick="openTab('clima')">☀ Clima ☀</a>
+    <a href="#" onclick="openTab('cultivo')">🪴 Cultivo 🪴</a>
+    <a href="#" onclick="openTab('historico')">📝 Histórico 📝</a>
+    <a href="#" onclick="openPopup()">⚙ Configurações ⚙</a>
+  </nav>
 
-    <div class="container mx-auto w-scree h-screen space-y-10">
-
-        <!-- Titulo -->
-        <div class="flex flex-col items-center pt-5">
-            <h1 class="text-4xl font-bold">Agro UCL</h1>
-            <p class="text-lg">Monitoramento de solo</p>
+  <div class="content" id="clima" style="display: block;">
+    <h2>Conteúdo da aba Clima</h2>
+    <div class="flex-container">
+      <div class="flex-item">
+        <div class="thermometer" id="thermometer" style="--temperature: 50%;"></div>
+        <div class="thermometer-labels">
+          <h3>Temperatura Atual: <span id="temperaturaValue">23</span> °C</h3>
+          <h3>Temperatura Mínima: <span id="minTempHistorico">23</span> °C</h3>
+          <h3>Temperatura Máxima: <span id="maxTempHistorico">23</span> °C</h3>
         </div>
-
-        <!-- Uma dashboard com cards dos valores dos sensores -->
-        <div id="cards" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 place-content-center">
-
-        </div>
-
+      </div>
+      <div class="flex-item">
+        <h2>Calcio</h2>
+        <p id="calcioValue">---</p>
+      </div>
+      <div class="flex-item">
+        <h2>ETP</h2>
+        <p id="etpValue">2.08</p>
+      </div>
+      <div class="flex-item">
+        <h2>Umidade</h2>
+        <p id="umidadeValue">---</p>
+      </div>
     </div>
+  </div>
 
+  <div class="content" id="cultivo" style="display: none;">
+    <h2>Conteúdo da aba Cultivo</h2>
+    <canvas id="myPieChart"></canvas>
+  </div>
 
-    <script type="module">
+  <div class="content" id="historico" style="display: none;">
+    <h2>Conteúdo da aba Histórico</h2>
+    <div id="minMaxTemperaturaHistorico"></div>
+    <table id="historicoTable">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Tipo de Dado</th>
+          <th>Valor</th>
+          <th>Horário</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
 
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js';
-        import { getDatabase, ref, get, query, onValue } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"
+  <div id="configPopup" class="popup">
+    <span class="close" onclick="closePopup()">×</span>
+    <h2>Configurações</h2>
+    <label for="themeSlider">Tema:</label>
+    <input type="range" min="0" max="1" step="1" value="0" class="slider" id="themeSlider" onchange="changeTheme(this.value)">
+  </div>
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyDYCi-dZe9TE41R5B8Wid8pg6PVtWuoHE8",
-            authDomain: "agroucl.firebaseapp.com",
-            databaseURL: "https://agroucl-default-rtdb.firebaseio.com",
-            projectId: "agroucl",
-            storageBucket: "agroucl.appspot.com",
-            messagingSenderId: "915400744363",
-            appId: "1:915400744363:web:500ced47406b81be5f46ee",
-            measurementId: "G-MH11N45216"
-        };
+  <div class="overlay" id="overlay"></div>
 
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app);
+  <div class="popup" id="popup">
+    <span class="close" onclick="closePopup()">×</span>
+    <h2>Escolha um tema</h2>
+    <div class="emoji">☀</div>
+    <button onclick="changeTheme('light')"> Claro</button>
+    <div class="emoji">🌒</div>
+    <button onclick="changeTheme('dark')"> Escuro</button>
+  </div>
 
-        const dbRef = ref(db, 'solo');
+  <button onclick="openPopup()">Trocar Tema</button>
 
-        onValue(dbRef, (snapshot) => {
-            const data = snapshot.val();
-            console.log(data);
-            const mapedData = mapValues(data);
-            updateCards(mapedData);
+  <script>
+    function openPopup() {
+      document.getElementById("overlay").style.display = "block";
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("overlay").style.display = "none";
+      document.getElementById("popup").style.display = "none";
+    }
+
+    function changeTheme(theme) {
+      if (theme === 'light') {
+        document.body.style.backgroundColor = '#ffffff';
+        document.body.style.color = '#333333';
+      } else if (theme === 'dark') {
+        document.body.style.backgroundColor = '#1a1a1a';
+        document.body.style.color = '#ffffff';
+      }
+      closePopup();
+    }
+
+    let leituras = []; // Lista para armazenar todas as leituras de temperatura
+    const ledRef = ref(db, 'led'); // Referência ao campo 'led'
+
+    function openTab(tabName) {
+      var i, tabcontent;
+      tabcontent = document.getElementsByClassName("content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+      closePopup();
+    }
+
+    function openPopup() {
+      document.getElementById('configPopup').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('configPopup').style.display = 'none';
+    }
+
+    function changeTheme(value) {
+      if (value == 1) {
+        document.body.style.backgroundColor = '#fefffe';
+        document.body.style.color = '#1a1a1a';
+        document.querySelector('nav').style.backgroundColor = '#e5e4e2';
+        var links = document.querySelectorAll('nav a');
+        links.forEach(link => {
+          link.style.color = '#000000';
+          link.style.backgroundColor = '#a6a6a6';
         });
+      } else {
+        document.body.style.backgroundColor = '#1a1a1a';
+        document.body.style.color = '#fcd7e3';
+        document.querySelector('nav').style.backgroundColor = '#fcd7e3';
+        var links = document.querySelectorAll('nav a');
+        links.forEach(link => {
+          link.style.color = '#8e3a59';
+          link.style.backgroundColor = '#ea8caa';
+        });
+      }
+    }
 
-        const capitalize = (str) => {
-            return str.charAt(0).toUpperCase() + str.slice(1);
-        }
+    function addRowToHistorico(id, tipo, valor, horario) {
+      var table = document.getElementById("historicoTable").getElementsByTagName('tbody')[0];
+      var newRow = table.insertRow(0);
+      var cell1 = newRow.insertCell(0);
+      var cell2 = newRow.insertCell(1);
+      var cell3 = newRow.insertCell(2);
+      var cell4 = newRow.insertCell(3);
+      cell1.innerHTML = id;
+      cell2.innerHTML = tipo;
+      cell3.innerHTML = valor;
+      cell4.innerHTML = horario;
 
-        const CardComponent = (title, value) => {
-            return `
-                <div class="bg-gray-200 p-4 rounded-lg text-center">
-                    <h2 class="text-xl font-bold">${title}</h2>
-                    <p id="phValue" class="text-3xl">${value}</p>
-                </div>
-            `;
-        }
+      leituras.push(valor);
 
-        const mapValues = (data) => {
-            return {
-                //ph: data.PH,
-                temperatura: data.temperatura, //data é o acesso ao servidor
-                //umidade: data.umidade,
-                //chuva: data.chuva ?? "N/A"
+      updateTemperaturasHistorico();
+    }
+
+    function updateTemperaturasHistorico() {
+      if (leituras.length > 0) {
+        document.getElementById("minTempHistorico").textContent = "Mínima: " + Math.min(...leituras) + " °C";
+        document.getElementById("maxTempHistorico").textContent = "Máxima: " + Math.max(...leituras) + " °C";
+      } else {
+        document.getElementById("minTempHistorico").textContent = "Mínima: -";
+        document.getElementById("maxTempHistorico").textContent = "Máxima: -";
+      }
+    }
+
+    onValue(ledRef, (snapshot) => {
+      const ledState = snapshot.val();
+      const ledStatus = ledState ? "Ligado" : "Desligado";
+      const currentTime = getCurrentDateTime();
+      addRowToHistorico("LED", "Estado", ledStatus, currentTime);
+    });
+
+    function getCurrentDateTime() {
+      const currentDate = new Date();
+      const day = currentDate.getDate().toString().padStart(2, '0');
+      const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+      const year = currentDate.getFullYear();
+      const hours = currentDate.getHours().toString().padStart(2, '0');
+      const minutes = currentDate.getMinutes().toString().padStart(2, '0');
+      const seconds = currentDate.getSeconds().toString().padStart(2, '0');
+      return ${day}/${month}/${year} ${hours}:${minutes}:${seconds};
+    }
+  </script>
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js';
+    import { getDatabase, ref, get, query, onValue } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDYCi-dZe9TE41R5B8Wid8pg6PVtWuoHE8",
+      authDomain: "agroucl.firebaseapp.com",
+      databaseURL: "https://agroucl-default-rtdb.firebaseio.com",
+      projectId: "agroucl",
+      storageBucket: "agroucl.appspot.com",
+      messagingSenderId: "915400744363",
+      appId: "1:915400744363:web:500ced47406b81be5f46ee",
+      measurementId: "G-MH11N45216"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    const dbRef = ref(db, 'solo');
+
+    onValue(dbRef, (snapshot) => {
+      const data = snapshot.val();
+      console.log(data);
+      const mapedData = mapValues(data);
+      updateCards(mapedData);
+      updatePieChart(mapedData); // Update the pie chart with new data
+      addRowToHistorico(new Date().toISOString(), "Temperatura", mapedData.temperatura, getCurrentDateTime());
+      addRowToHistorico(new Date().toISOString(), "Calcio", mapedData.Calcio, getCurrentDateTime());
+      addRowToHistorico(new Date().toISOString(), "ETP", mapedData.ETP, getCurrentDateTime());
+    });
+
+    const capitalize = (str) => {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    const CardComponent = (title, value) => {
+      return `
+        <div class="bg-gray-200 p-4 rounded-lg text-center">
+          <h2 class="text-xl font-bold">${title}</h2>
+          <p id="phValue" class="text-3xl">${value}</p>
+        </div>
+      `;
+    }
+
+    const mapValues = (data) => {
+      return {
+        temperatura: data.temperatura,
+        ETP: data.ETP,
+        Calcio: data.Calcio,
+        umidade: data.umidade,
+        Potenciometro: data.potenciometro,
+      }
+    }
+
+    const updateCards = (data) => {
+      const cards = document.getElementById('cards');
+      cards.innerHTML = '';
+      Object.entries(data).map(([key, value]) => {
+        cards.innerHTML += CardComponent(capitalize(key), value);
+      });
+    }
+
+    // Function to update the pie chart
+    const updatePieChart = (data) => {
+      const ctx = document.getElementById('myPieChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Temperatura', 'ETP', 'Umidade', 'Calcio'],
+          datasets: [{
+            data: [data.temperatura, data.ETP, data.umidade, data.Calcio],
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+            hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            tooltip: {
+              callbacks: {
+                label: function(tooltipItem) {
+                  return tooltipItem.label + ': ' + tooltipItem.raw;
+                }
+              }
             }
+          }
         }
-
-        const updateCards = (data) => {
-            const cards = document.getElementById('cards');
-            cards.innerHTML = '';
-            Object.entries(data).map(([key, value]) => {
-                cards.innerHTML += CardComponent(capitalize(key), value);
-            });
-        }
-    </script>
-
+      });
+    }
+  </script>
 </body>
-
 </html>
