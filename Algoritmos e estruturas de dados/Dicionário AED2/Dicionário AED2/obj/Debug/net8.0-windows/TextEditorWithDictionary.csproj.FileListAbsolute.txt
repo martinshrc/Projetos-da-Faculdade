@@ -1,0 +1,28 @@
+C:\Users\Luana\TextEditorWithDictionary\bin\Debug\net8.0-windows\TextEditorWithDictionary.exe
+C:\Users\Luana\TextEditorWithDictionary\bin\Debug\net8.0-windows\TextEditorWithDictionary.deps.json
+C:\Users\Luana\TextEditorWithDictionary\bin\Debug\net8.0-windows\TextEditorWithDictionary.runtimeconfig.json
+C:\Users\Luana\TextEditorWithDictionary\bin\Debug\net8.0-windows\TextEditorWithDictionary.dll
+C:\Users\Luana\TextEditorWithDictionary\bin\Debug\net8.0-windows\TextEditorWithDictionary.pdb
+C:\Users\Luana\TextEditorWithDictionary\obj\Debug\net8.0-windows\TextEditorWithDictionary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luana\TextEditorWithDictionary\obj\Debug\net8.0-windows\TextEditorWithDictionary.AssemblyInfoInputs.cache
+C:\Users\Luana\TextEditorWithDictionary\obj\Debug\net8.0-windows\TextEditorWithDictionary.AssemblyInfo.cs
+C:\Users\Luana\TextEditorWithDictionary\obj\Debug\net8.0-windows\TextEditorWithDictionary.csproj.CoreCompileInputs.cache
+C:\Users\Luana\TextEditorWithDictionary\obj\Debug\net8.0-windows\TextEditorWithDictionary.dll
+C:\Users\Luana\TextEditorWithDictionary\obj\Debug\net8.0-windows\refint\TextEditorWithDictionary.dll
+C:\Users\Luana\TextEditorWithDictionary\obj\Debug\net8.0-windows\TextEditorWithDictionary.pdb
+C:\Users\Luana\TextEditorWithDictionary\obj\Debug\net8.0-windows\TextEditorWithDictionary.genruntimeconfig.cache
+C:\Users\Luana\TextEditorWithDictionary\obj\Debug\net8.0-windows\ref\TextEditorWithDictionary.dll
+C:\Users\Luana\Dicionário AED2\bin\Debug\net8.0-windows\TextEditorWithDictionary.exe
+C:\Users\Luana\Dicionário AED2\bin\Debug\net8.0-windows\TextEditorWithDictionary.deps.json
+C:\Users\Luana\Dicionário AED2\bin\Debug\net8.0-windows\TextEditorWithDictionary.runtimeconfig.json
+C:\Users\Luana\Dicionário AED2\bin\Debug\net8.0-windows\TextEditorWithDictionary.dll
+C:\Users\Luana\Dicionário AED2\bin\Debug\net8.0-windows\TextEditorWithDictionary.pdb
+C:\Users\Luana\Dicionário AED2\obj\Debug\net8.0-windows\TextEditorWithDictionary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luana\Dicionário AED2\obj\Debug\net8.0-windows\TextEditorWithDictionary.AssemblyInfoInputs.cache
+C:\Users\Luana\Dicionário AED2\obj\Debug\net8.0-windows\TextEditorWithDictionary.AssemblyInfo.cs
+C:\Users\Luana\Dicionário AED2\obj\Debug\net8.0-windows\TextEditorWithDictionary.csproj.CoreCompileInputs.cache
+C:\Users\Luana\Dicionário AED2\obj\Debug\net8.0-windows\TextEditorWithDictionary.dll
+C:\Users\Luana\Dicionário AED2\obj\Debug\net8.0-windows\refint\TextEditorWithDictionary.dll
+C:\Users\Luana\Dicionário AED2\obj\Debug\net8.0-windows\TextEditorWithDictionary.pdb
+C:\Users\Luana\Dicionário AED2\obj\Debug\net8.0-windows\TextEditorWithDictionary.genruntimeconfig.cache
+C:\Users\Luana\Dicionário AED2\obj\Debug\net8.0-windows\ref\TextEditorWithDictionary.dll

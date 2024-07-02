@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "cFZOLb1Bqas=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\heric\\Desktop\\LUANA_Dicionário AED2\\Dicionário AED2\\TextEditorWithDictionary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\heric\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.5\\microsoft.netcore.app.ref.8.0.5.nupkg.sha512",
+    "C:\\Users\\heric\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.5\\microsoft.windowsdesktop.app.ref.8.0.5.nupkg.sha512",
+    "C:\\Users\\heric\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.5\\microsoft.aspnetcore.app.ref.8.0.5.nupkg.sha512",
+    "C:\\Users\\heric\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.5\\microsoft.netcore.app.host.win-x64.8.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
